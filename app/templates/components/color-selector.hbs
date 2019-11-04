@@ -1,0 +1,4 @@
+Put on a {{itemName}}:
+{{#each itemColors as |color|}}
+    <button {{action 'changeItem' color}} style="color:{{color}}" class="{{color}}">{{color}}</button>
+{{/each}}

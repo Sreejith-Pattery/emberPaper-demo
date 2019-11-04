@@ -1,0 +1,7 @@
+{{#if isOpen}}
+    <button {{action 'close'}} class="pull-right">X</button>
+    {{yield (action 'close') attrs.changeItem2}}
+{{else}}
+    Closed. <button {{action 'open'}}>Open</button>
+    <button {{action 'open'}} class="pull-right">V</button>
+{{/if}}

@@ -1,0 +1,7 @@
+{{#if noItem}}
+   <p>You have no {{itemName}} </p>
+{{else}}
+    <p>You are wearing a <span style="color:{{itemColor}};">{{itemColor}}</span> {{itemName}}</p>
+{{/if}}
+
+{{color-selector itemName=itemName itemColor=itemColor changeItem=attrs.changeItem}}

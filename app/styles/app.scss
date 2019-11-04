@@ -1,0 +1,35 @@
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+@import "ember-bootstrap/bootstrap";
+
+$primary:'deep-orange';
+@import "ember-paper";
+
+
+
+.ember-modal-dialog{
+    width: 200px;
+    height: 100px;
+}
+
+.collapsible-box{
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.paper-right {
+    margin-left: auto;
+}
+
+.md-content {
+    overflow: visible;
+}
+
+.centered-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

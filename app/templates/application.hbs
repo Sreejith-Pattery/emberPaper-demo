@@ -1,5 +1,17 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
+{{#paper-toolbar}}
+<div class="md-toolbar-tools">
+    {{#link-to 'index'}}{{#paper-button}}{{paper-icon 'home'}} Home{{/paper-button}}{{/link-to}}
+    {{#link-to 'paper-form'}}{{#paper-button}}Paper Forms{{/paper-button}}{{/link-to}}
+    {{#link-to 'index'}}{{#paper-button}}My Courses{{/paper-button}}{{/link-to}}
+    <div class="paper-right">
+        {{paper-icon 'person'}}
+        {{#link-to 'index'}}{{#paper-button}}logout{{/paper-button}}{{/link-to}}
+    </div>
+</div>
+{{/paper-toolbar}}
 {{outlet}}
+{{#if isShowingModal}}
+{{#modal-dialog translucentOverlay=true close='closeModalDialog'}}
+    {{modalMessage}}
+{{/modal-dialog}}
+{{/if}}

@@ -1,0 +1,18 @@
+{{#paper-content class="md-padding centered-form"}}
+<h1>Most Important Facts</h1>
+{{paper-input label="Favorite Taco" value=taco onChange=(action (mut taco))}}
+<br/>
+{{paper-input label="Favorite Javascript Framework" value=jsscript  onChange=(action (mut jsscript)) required=true required-errortext="you might need jquery"}}
+<br/>
+{{#paper-checkbox value=isCertified onChange=(action (mut isCertified))}}
+    Microsoft Certified Solution Associate:{{isCertified}}
+{{/paper-checkbox}}
+<h3>How awesome is this form </h3>
+<div layout-sm="column">
+    {{#paper-radio value="1" toggle="true" groupValue=selectedValue onChange=(action (mut selectedValue))}}So Rad{{/paper-radio}}
+    {{#paper-radio value="3" toggle="true" groupValue=selectedValue  onChange=(action (mut selectedValue))}}Changed my life, dude{{/paper-radio}}
+    {{#paper-radio value="2" toggle="true" groupValue=selectedValue  onChange=(action (mut selectedValue))}}Tubular{{/paper-radio}}
+</div>
+
+{{#paper-button raised=true}}Submit{{/paper-button}}
+{{/paper-content}}
